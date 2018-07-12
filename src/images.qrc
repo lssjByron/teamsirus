@@ -1,0 +1,51 @@
+<RCC>
+    <qresource prefix="/">
+        <file>logo.png</file>
+        <file>icon32.ico</file>
+        <file>print_button.png</file>
+        <file>printer.png</file>
+        <file>Pdf.svg</file>
+        <file>Sirius_Logo_Colour_Large.png</file>
+        <file>Tab Icons/Funding.png</file>
+        <file>Tab Icons/Presentations.png</file>
+        <file>Tab Icons/Publications.png</file>
+        <file>Tab Icons/Teaching.png</file>
+        <file>Action Icons/BarGraph150.png</file>
+        <file>Action Icons/BarGraph512.png</file>
+        <file>Action Icons/LineGraph150.png</file>
+        <file>Action Icons/LineGraph512.png</file>
+        <file>Action Icons/PieChart150.png</file>
+        <file>Action Icons/PieChart512.png</file>
+        <file>Action Icons/Print150.png</file>
+        <file>Action Icons/Print512.png</file>
+        <file>Action Icons/Save150.png</file>
+        <file>Action Icons/Save512.png</file>
+        <file>Logo.svg</file>
+        <file>SmallLogo.png</file>
+        <file>PlusSign.png</file>
+        <file>Action Icons/PDF150.png</file>
+        <file>Action Icons/PDF512.png</file>
+        <file>Fonts/HelveticaNeue.ttf</file>
+        <file>Fonts/HelveticaNeueBold.ttf</file>
+        <file>Fonts/HelveticaNeueBoldItalic.ttf</file>
+        <file>Fonts/HelveticaNeueCondensedBlack.ttf</file>
+        <file>Fonts/HelveticaNeueCondensedBold.ttf</file>
+        <file>Fonts/HelveticaNeueItalic.ttf</file>
+        <file>Fonts/HelveticaNeueLight.ttf</file>
+        <file>Fonts/HelveticaNeueLightItalic.ttf</file>
+        <file>Fonts/HelveticaNeueMedium.ttf</file>
+        <file>Fonts/HelveticaNeueMediumItalic.ttf</file>
+        <file>Fonts/HelveticaNeueThin.ttf</file>
+        <file>Fonts/HelveticaNeueThinItalic.ttf</file>
+        <file>Fonts/HelveticaNeueUltraLight.ttf</file>
+        <file>Fonts/HelveticaNeueUltraLightItalic.ttf</file>
+        <file>NVIZION Oo Logo.svg</file>
+        <file>Action Icons/WebGraph512.png</file>
+        <file>dropdown.png</file>
+        <file>dropup.png</file>
+        <file>BackButton.png</file>
+        <file>NextButton.png</file>
+        <file>LogoStartup.svg</file>
+        <file>StartImage.png</file>
+    </qresource>
+</RCC>

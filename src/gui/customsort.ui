@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomSort</class>
+ <widget class="QDialog" name="CustomSort">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>294</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Create New Sort Order</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../images.qrc">
+    <normaloff>:/icon32.ico</normaloff>:/icon32.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QDialog{
+background-color:white;
+}
+
+
+QPushButton{
+    background-color: rgb(3, 41, 85);
+	color: white;
+    border-radius: 13px;
+    padding: 5px;
+
+
+
+
+    border-style: outset;
+    border-width: 2px;
+	border-color: rgba(0,0,0,0);
+    min-width: 5em;
+}
+
+
+/* For the next/prev Error buttons. Just to make them a bit smaller. not as wide*/
+
+
+QPushButton#prevErrButton{
+	min-width: 1em;
+}
+QPushButton#nextErrButton{
+    min-width: 1em;
+}
+
+
+
+
+QPushButton:pressed {
+	/* Color to use for clicking*/
+    background-color: rgb(7, 100, 207);
+    border-style: inset;
+}
+
+
+
+QFrame
+{
+background:rgb(255,255,255);
+
+
+color:rgb(3, 41, 85);
+}
+
+
+QComboBox{
+	
+	border-color: rgb(3, 41, 85);
+	border-width: 1px;        
+	border-style: solid;
+	color:rgb(3, 41, 85);
+
+
+	background-color:rgb(223, 229, 234);
+	co	lor:rgb(3, 41, 85);
+
+
+
+
+	border-radius: 13px;
+	padding:4px;
+}
+
+
+QComboBox::down-arrow {
+	/* Add Css for the drop down menus*/
+}
+
+
+
+
+
+
+
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="sort_label">
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Create New Sort Order&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Enter name of new custom sort</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="sort_name">
+        <property name="styleSheet">
+         <string notr="true">
+color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+border-radius: 11px;
+padding:4px;
+
+</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="dragEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Select your sort's order</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_0">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_1">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_2">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_3">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_4">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_5">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="field_6">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+   color:rgb(3, 41, 85);
+background-color:#EDF3FE;
+
+
+    /*padding: 1px 0px 1px 3px; /* This (useless) line resolves a bug with the font color */
+}
+
+
+QComboBox:focus {
+    color: red;
+}
+
+
+QComboBox::drop-down 
+{
+    border: 0px; /* This seems to replace the whole arrow of the combo box */
+	padding-right:10px;
+}
+
+
+/* Define a new custom arrow icon for the combo box */
+QComboBox::down-arrow {
+    image: url(:/dropdown.png);
+    width: 14px;
+    height: 14px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QDialogButtonBox" name="buttonBox">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="standardButtons">
+           <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+          </property>
+          <property name="centerButtons">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
